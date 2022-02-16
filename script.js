@@ -16,3 +16,9 @@ const richestPeople = [
 
 // Store list items
 const listItems = [];
+
+let dragStartIndex;
+
+createList();
+
+// Insert list items into DOM
