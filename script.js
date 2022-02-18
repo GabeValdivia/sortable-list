@@ -51,18 +51,40 @@ function createList() {
 	addEventListeners();
 }
 
+function dragStart() {
+	// console.log('Event: ', 'dragstart');
+}
+
+function dragEnter() {
+	console.log('Event: ', 'dragenter');
+  this.classList.add('over');
+}
+
+function dragLeave() {
+    console.log('Event: ', 'dragleave');
+	this.classList.remove('over');
+}
+
+function dragOver() {
+	// console.log('Event: ', 'dragover');
+}
+
+function dragDrop() {
+	// console.log('Event: ', 'drop');
+}
+
 function addEventListeners() {
 	const draggables = document.querySelectorAll('.draggable');
 	const dragListItems = document.querySelectorAll('.draggable-list li');
 
 	draggables.forEach(draggable => {
 		draggable.addEventListener('dragstart', dragStart);
-	})
+	});
 	
-	draggables.forEach(item => {
+	dragListItems.forEach(item => {
 		item.addEventListener('dragover', dragOver);
 		item.addEventListener('drop', dragDrop);
 		item.addEventListener('dragenter', dragEnter);
 		item.addEventListener('dragleave', dragLeave);
-	})
+	});
 }
