@@ -31,6 +31,8 @@ function createList() {
 
 		const listItem = document.createElement('li');
 
+		// listItem.classList.add('over');
+
 		listItem.setAttribute('data-index', index);
 
 		listItem.innerHTML = `
