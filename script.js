@@ -102,3 +102,6 @@ function addEventListeners() {
 		item.addEventListener('dragleave', dragLeave);
 	});
 }
+
+// Check if order is correct
+check.addEventListener('click', checkOrder);
